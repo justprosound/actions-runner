@@ -44,7 +44,7 @@ jobs:
       context: ${{ inputs.context }}
       tags: ${{ inputs.tags }}
 
-  build-ubuntu20:
+  build-ubuntu22:
     uses: ./.github/workflows/reusable--build.yaml
     permissions:
       contents: read
@@ -58,7 +58,7 @@ jobs:
   e2e-test:
     needs:
       - build
-      - build-ubuntu20
+      - build-ubuntu22
     uses: ./.github/workflows/reusable--e2e-test.yaml
     secrets: inherit
     with:
