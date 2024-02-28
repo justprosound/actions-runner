@@ -63,4 +63,4 @@ jobs:
     secrets: inherit
     with:
       runner-image-uri: ${{ needs.build.outputs.image-uri }}
-      runner-ubuntu20-image-uri: ${{ needs.build-ubuntu20.outputs.image-uri }}
+      # runner-ubuntu20-image-uri: ${{ needs.build-ubuntu20.outputs.image-uri }}
