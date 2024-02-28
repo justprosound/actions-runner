@@ -44,21 +44,21 @@ jobs:
       context: ${{ inputs.context }}
       tags: ${{ inputs.tags }}
 
-  build-ubuntu20:
-    uses: ./.github/workflows/reusable--build.yaml
-    permissions:
-      contents: read
-      packages: write
-    with:
-      context: ${{ inputs.context }}
-      tags: ${{ inputs.tags }}
-      file: Dockerfile.ubuntu20
-      flavor: suffix=-ubuntu20
+  # build-ubuntu20:
+  #   uses: ./.github/workflows/reusable--build.yaml
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   with:
+  #     context: ${{ inputs.context }}
+  #     tags: ${{ inputs.tags }}
+  #     file: Dockerfile.ubuntu20
+  #     flavor: suffix=-ubuntu20
 
   e2e-test:
     needs:
       - build
-      - build-ubuntu20
+      # - build-ubuntu20
     uses: ./.github/workflows/reusable--e2e-test.yaml
     secrets: inherit
     with:
