@@ -14,6 +14,7 @@ RUN sudo apt-get update -y \
         jq \
         unzip \
         zip \
+        wget \
         # packages in actions-runner-controller/runner-20.04
         build-essential \
         locales \
