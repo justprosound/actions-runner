@@ -15,6 +15,8 @@ RUN sudo apt-get update -y \
         unzip \
         zip \
         wget \
+        # packages needed by actions/cache
+        zstd \
         # packages in actions-runner-controller/runner-20.04
         build-essential \
         locales \
